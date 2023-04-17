@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+  </head>
+  <body>
+    <header>
+      <h1><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
+      <nav>
+        {% for item in site.navigation %}
+          <a href="{{ item.url }}">{{ item.title }}</a>
+        {% endfor %}
+      </nav>
+    </header>
+    <main>
+      {{ content }}
+    </main>
+    <footer>
+      <p>&copy; {{ site.author }} {{ site.year }}</p>
+    </footer>
+  </body>
+</html>
